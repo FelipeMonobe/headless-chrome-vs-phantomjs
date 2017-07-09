@@ -1,0 +1,16 @@
+{
+  "name": "phantomjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "measure:scrap": "node --prof index.js",
+    "start:scrap": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "phantomjs-prebuilt": "^2.1.14"
+  }
+}

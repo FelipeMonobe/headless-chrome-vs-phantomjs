@@ -1,0 +1,170 @@
+Statistical profiling result from isolate-0x2202550-v8.log, (97 ticks, 9 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+     37   38.1%          /usr/bin/node
+      4    4.1%          /usr/lib/libc-2.25.so
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      1    1.0%    1.8%  Function: ~normalizeSpawnArguments child_process.js:378:33
+      1    1.0%    1.8%  Function: ~createWritableStdioStream internal/process/stdio.js:151:35
+      1    1.0%    1.8%  Function: ~NativeModule bootstrap_node.js:470:24
+      1    1.0%    1.8%  Function: ~EventEmitter.init events.js:61:29
+
+ [C++]:
+   ticks  total  nonlib   name
+      2    2.1%    3.6%  v8::internal::Scanner::Scan()
+      2    2.1%    3.6%  syscall
+      2    2.1%    3.6%  int v8::internal::BinarySearch<(v8::internal::SearchMode)1, v8::internal::DescriptorArray>(v8::internal::DescriptorArray*, v8::internal::Name*, int, int*)
+      2    2.1%    3.6%  __memcpy_sse2_unaligned_erms
+      2    2.1%    3.6%  __GI__IO_default_xsputn
+      1    1.0%    1.8%  v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterAllocateEvent(v8::internal::interpreter::Register)
+      1    1.0%    1.8%  v8::internal::VariableProxy::AssignFeedbackSlots(v8::internal::FeedbackVectorSpec*, v8::internal::TypeofMode, v8::internal::FeedbackSlotCache*)
+      1    1.0%    1.8%  v8::internal::ToBooleanIC::ToBoolean(v8::internal::Handle<v8::internal::Object>)
+      1    1.0%    1.8%  v8::internal::String::SlowEquals(v8::internal::String*)
+      1    1.0%    1.8%  v8::internal::StackFrameIteratorBase::SingletonFor(v8::internal::StackFrame::Type)
+      1    1.0%    1.8%  v8::internal::Scope::LookupRecursive(v8::internal::VariableProxy*, v8::internal::Scope*)
+      1    1.0%    1.8%  v8::internal::Scanner::ScanIdentifierOrKeyword()
+      1    1.0%    1.8%  v8::internal::ParserBase<v8::internal::Parser>::ParseVariableStatement(v8::internal::ParserBase<v8::internal::Parser>::VariableDeclarationContext, v8::internal::ZoneList<v8::internal::AstRawString const*>*, bool*)
+      1    1.0%    1.8%  v8::internal::Parser::Parser(v8::internal::ParseInfo*)
+      1    1.0%    1.8%  v8::internal::Object::SetProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::LanguageMode, v8::internal::Object::StoreFromKeyed)
+      1    1.0%    1.8%  v8::internal::Object::OptimalType(v8::internal::Isolate*, v8::internal::Representation)
+      1    1.0%    1.8%  v8::internal::List<v8::internal::Statement*, v8::internal::ZoneAllocationPolicy>::Add(v8::internal::Statement* const&, v8::internal::ZoneAllocationPolicy)
+      1    1.0%    1.8%  v8::internal::List<v8::internal::CharacterRange, v8::internal::ZoneAllocationPolicy>::Add(v8::internal::CharacterRange const&, v8::internal::ZoneAllocationPolicy)
+      1    1.0%    1.8%  v8::internal::JSGlobalObject::EnsureEmptyPropertyCell(v8::internal::Handle<v8::internal::JSGlobalObject>, v8::internal::Handle<v8::internal::Name>, v8::internal::PropertyCellType, int*)
+      1    1.0%    1.8%  v8::internal::InnerPointerToCodeCache::GetCacheEntry(unsigned char*)
+      1    1.0%    1.8%  v8::internal::IC::IC(v8::internal::IC::FrameDepth, v8::internal::Isolate*, v8::internal::FeedbackNexus*)
+      1    1.0%    1.8%  v8::internal::HashTable<v8::internal::UnseededNumberDictionary, v8::internal::UnseededNumberDictionaryShape, unsigned int>::FindEntry(v8::internal::Isolate*, unsigned int)
+      1    1.0%    1.8%  v8::internal::FullCodeGenerator::SetStatementPosition(v8::internal::Statement*, v8::internal::FullCodeGenerator::InsertBreak)
+      1    1.0%    1.8%  v8::internal::ExpressionClassifier<v8::internal::ParserTypes<v8::internal::Parser> >::Accumulate(v8::internal::ExpressionClassifier<v8::internal::ParserTypes<v8::internal::Parser> >*, unsigned int, bool)
+      1    1.0%    1.8%  v8::internal::CodeStub::GetCode()
+      1    1.0%    1.8%  v8::internal::Code::CopyFrom(v8::internal::CodeDesc const&)
+      1    1.0%    1.8%  v8::internal::AstNumberingVisitor::VisitCompareOperation(v8::internal::CompareOperation*)
+      1    1.0%    1.8%  v8::internal::Assembler::emit_mov(v8::internal::Register, v8::internal::Operand const&, int)
+      1    1.0%    1.8%  v8::internal::Assembler::bind_to(v8::internal::Label*, int)
+      1    1.0%    1.8%  v8::internal::Accessors::ReconfigureToDataProperty(v8::Local<v8::Name>, v8::Local<v8::Value>, v8::PropertyCallbackInfo<v8::Boolean> const&)
+      1    1.0%    1.8%  v8::base::OS::VSNPrintF(char*, int, char const*, __va_list_tag*)
+      1    1.0%    1.8%  malloc_consolidate
+      1    1.0%    1.8%  do_lookup_x
+      1    1.0%    1.8%  do_futex_wait.constprop.1
+      1    1.0%    1.8%  _int_malloc
+      1    1.0%    1.8%  _int_free
+      1    1.0%    1.8%  __memcmp_sse4_1
+      1    1.0%    1.8%  __GI__IO_vfprintf
+
+ [Summary]:
+   ticks  total  nonlib   name
+      4    4.1%    7.1%  JavaScript
+     43   44.3%   76.8%  C++
+      2    2.1%    3.6%  GC
+     41   42.3%          Shared libraries
+      9    9.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     33   47.8%   34.0%  v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     22   31.9%   22.7%  v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      5    7.2%    5.2%  v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    2.9%    2.1%  v8::internal::Runtime_RegExpExec(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    2.9%    2.1%  v8::internal::Runtime_LoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.4%    1.0%  v8::internal::Runtime_ToBooleanIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.4%    1.0%  v8::internal::Runtime_KeyedLoadIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.4%    1.0%  v8::internal::Runtime_DefineGetterPropertyUnchecked(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.4%    1.0%  v8::internal::Runtime_BinaryOpIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.4%    1.0%  v8::base::OS::VSNPrintF(char*, int, char const*, __va_list_tag*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 2.0% are not shown.
+
+   ticks parent  name
+     37   38.1%  /usr/bin/node
+     33   89.2%    v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     26   78.8%      Function: ~runInThisContext bootstrap_node.js:465:28
+     26  100.0%        Function: ~NativeModule.compile bootstrap_node.js:551:44
+     26  100.0%          Function: ~NativeModule.require bootstrap_node.js:481:34
+      6   23.1%            Function: ~startup bootstrap_node.js:12:19
+      4   15.4%            Function: ~<anonymous> module.js:1:11
+      3   11.5%            Function: ~<anonymous> internal/child_process.js:1:11
+      2    7.7%            Function: ~setupGlobalVariables bootstrap_node.js:215:32
+      2    7.7%            Function: ~NativeModule.compile bootstrap_node.js:551:44
+      2    7.7%            Function: ~<anonymous> util.js:1:11
+      1    3.8%            Function: ~setupGlobalTimeouts bootstrap_node.js:260:31
+      1    3.8%            Function: ~Module._load module.js:432:24
+      1    3.8%            Function: ~<anonymous> timers.js:1:11
+      1    3.8%            Function: ~<anonymous> fs.js:1:11
+      1    3.8%            Function: ~<anonymous> child_process.js:1:11
+      1    3.8%            Function: ~<anonymous> buffer.js:1:11
+      1    3.8%            Function: ~<anonymous> _stream_readable.js:1:11
+      2    6.1%      Function: ~createScript vm.js:73:22
+      2  100.0%        Function: ~runInThisContext vm.js:115:26
+      2  100.0%          Function: ~Module._compile module.js:526:37
+      2  100.0%            Function: ~Module._extensions..js module.js:578:37
+      2    6.1%      Function: ~ChildProcess.spawn internal/child_process.js:253:40
+      2  100.0%        Function: ~exports.spawn child_process.js:484:37
+      2  100.0%          Function: ~exports.exec /home/xinube/Projects/headless-chrome-vs-phantomjs/phantomjs/node_modules/phantomjs-prebuilt/lib/phantomjs.js:70:25
+      2  100.0%            Function: ~<anonymous> /home/xinube/Projects/headless-chrome-vs-phantomjs/phantomjs/index.js:1:11
+      1    3.0%      Function: ~<anonymous> internal/util.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:551:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:481:34
+      1  100.0%            Function: ~<anonymous> buffer.js:1:11
+      1    3.0%      Function: ~<anonymous> internal/process.js:199:37
+      1  100.0%        Function: ~emitTwo events.js:123:17
+      1  100.0%          Function: ~emit events.js:155:44
+      1  100.0%            Function: ~_addListener events.js:232:22
+      1    3.0%      Function: ~<anonymous> buffer.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:551:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:481:34
+      1  100.0%            Function: ~<anonymous> util.js:1:11
+      1    2.7%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~startup bootstrap_node.js:12:19
+      1  100.0%        Function: ~<anonymous> bootstrap_node.js:10:10
+      1    2.7%    Function: ~resolve path.js:1152:28
+      1  100.0%      Function: ~Module._findPath module.js:161:28
+      1  100.0%        Function: ~Module._resolveFilename module.js:475:35
+      1  100.0%          Function: ~Module._load module.js:432:24
+      1  100.0%            Function: ~Module.runMain module.js:603:26
+
+      9    9.3%  UNKNOWN
+
+      4    4.1%  /usr/lib/libc-2.25.so
+      1   25.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~tryPackage module.js:114:20
+      1  100.0%        Function: ~Module._findPath module.js:161:28
+      1  100.0%          Function: ~Module._resolveFilename module.js:475:35
+      1  100.0%            Function: ~Module._load module.js:432:24
+
+      2    2.1%  v8::internal::Scanner::Scan()
+      2  100.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1   50.0%      Function: ~onEofChunk _stream_readable.js:469:20
+      1  100.0%        Function: ~readableAddChunk _stream_readable.js:205:26
+      1  100.0%          Function: ~Readable.push _stream_readable.js:180:35
+      1  100.0%            Function: ~onread net.js:571:16
+      1   50.0%      Function: ~<anonymous> internal/streams/legacy.js:1:11
+      1  100.0%        Function: ~NativeModule.compile bootstrap_node.js:551:44
+      1  100.0%          Function: ~NativeModule.require bootstrap_node.js:481:34
+      1  100.0%            Function: ~NativeModule.compile bootstrap_node.js:551:44
+
+      2    2.1%  syscall
+
+      2    2.1%  int v8::internal::BinarySearch<(v8::internal::SearchMode)1, v8::internal::DescriptorArray>(v8::internal::DescriptorArray*, v8::internal::Name*, int, int*)
+      1   50.0%    Function: ~NativeModule.getCached bootstrap_node.js:511:36
+      1  100.0%      Function: ~NativeModule.require bootstrap_node.js:481:34
+      1  100.0%        Function: ~startup bootstrap_node.js:12:19
+      1  100.0%          Function: ~<anonymous> bootstrap_node.js:10:10
+      1   50.0%    Function: ~Module._findPath module.js:161:28
+      1  100.0%      Function: ~Module._resolveFilename module.js:475:35
+      1  100.0%        Function: ~Module._load module.js:432:24
+      1  100.0%          Function: ~Module.require module.js:510:36
+      1  100.0%            Function: ~require internal/module.js:8:19
+
+      2    2.1%  __memcpy_sse2_unaligned_erms
+
+      2    2.1%  __GI__IO_default_xsputn
+      1   50.0%    v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      1  100.0%      Function: ~NativeModule.require bootstrap_node.js:481:34
+      1  100.0%        Function: ~startup bootstrap_node.js:12:19
+      1  100.0%          Function: ~<anonymous> bootstrap_node.js:10:10
+
